@@ -21,25 +21,9 @@
     </svg>
 
   </div>
-
-  <!-- Next Steps -->
-  <h2>Select Activity Type</h2>
-  
-  <div class="card-container">
-    <div class="card card-small"  tabindex="0">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-        <select [(ngModel)]="ActivityTypeModel" (ngModelChange)="onchangeActvityType()">
-          <option *ngFor="let x of arrActvityType" [ngValue]="x" >{{x.Value}}</option>
-        </select>
-    </div>
-  </div>
-   
-  <!-- Terminal -->
-  <div class="terminal" >
-      <pre>{{BoaredApiResult | json}}</pre>
-      
-  </div>
-
+ 
+ <app-boared-type-list (boaredApiResultEvent)="updateBoaredResult($event)"></app-boared-type-list>
+ <app-boared-result-console [BoaredApiResult]="BoaredApiResult"></app-boared-result-console>
   
 
 </div>

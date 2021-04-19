@@ -5,10 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BoaredTypeListComponent } from './controls/boared-type-list/boared-type-list.component';
+import { BoaredResultConsoleComponent } from './controls/boared-result-console/boared-result-console.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoaredTypeListComponent,
+    BoaredResultConsoleComponent
   ],
   imports: [
     BrowserModule,
